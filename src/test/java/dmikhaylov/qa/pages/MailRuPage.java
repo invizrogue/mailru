@@ -1,15 +1,10 @@
 package dmikhaylov.qa.pages;
 
 import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-
-import java.time.Duration;
 import java.util.List;
-
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MailRuPage {
@@ -77,7 +72,7 @@ public class MailRuPage {
     }
 
     public MailRuPage checkGoogleDomain() {
-        $x("//div[@class='domain-select']//span[text()='@google.com']").shouldBe(visible);
+        $x("//div[@class='domain-select']//span[text()='@gmail.com']").shouldBe(visible);
         return this;
     }
 

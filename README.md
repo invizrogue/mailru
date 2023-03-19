@@ -1,7 +1,9 @@
 # Автоматизация тестирования <a href="https://mail.ru" target="_blank"><img src="readme/images/mail.svg" width="20" height="20"> mail.ru</a>
 
 ## :scroll: Содержание
-[Технологии и инструменты](#-pushpin--технологии-и-инструменты)
+- [Технологии и инструменты](#-pushpin--технологии-и-инструменты)
+- [Запуск тестов](#-pushpin--запуск-тестов)
+- [Конфигурация тестов](#-pushpin--конфигурация-тестов)
 
 ## :pushpin: Технологии и инструменты
 <p align="center">
@@ -17,6 +19,31 @@
 <a href="https://www.jenkins.io/"><img src="readme/images/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 <img src="readme/images/Telegram.svg" width="50" height="50"  alt="Telegram"/>
 </p>
+
+## :pushpin: Запуск тестов
+### Локально
+<code>
+gradle clean test -Denv=local
+</code>
+
+### Удалённо
+<code>
+clean test -Denv=remote
+</code>
+
+## :pushpin: Конфигурация тестов
+### local.properties
+- <code>baseUrl</code> - тестируемый ресурс
+- <code>browserName</code> - название браузера (chrome, firefox)
+- <code>browserVersion</code> - версия браузера
+- <code>browserSize</code> - размер окна браузера
+
+### remote.properties
+- <code>baseUrl</code> - тестируемый ресурс
+- <code>browserName</code> - название браузера (chrome, firefox)
+- <code>browserVersion</code> - версия браузера
+- <code>browserSize</code> - размер окна браузера
+- <code>remote</code> - адрес развёрнутого контейнера selenoid
 
 [Вернуться к содержанию](#-scroll--содержание)
 

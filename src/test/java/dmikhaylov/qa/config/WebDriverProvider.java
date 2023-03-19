@@ -12,6 +12,7 @@ public class WebDriverProvider {
         Configuration.driverManagerEnabled = true;
         if (config.getBrowserName().equalsIgnoreCase("chrome")) {
             Configuration.browser = "chrome";
+            System.setProperty("chromeoptions.prefs","intl.accept_languages=ru");
         } else if (config.getBrowserName().equalsIgnoreCase("firefox")) {
             Configuration.browser = "firefox";
         } else {

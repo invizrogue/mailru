@@ -22,14 +22,10 @@
 
 ## :pushpin: Запуск тестов
 ### Локально
-<code>
-gradle clean test -Denv=local
-</code>
+<code>gradle clean test -Denv=local</code>
 
 ### Удалённо
-<code>
-clean test -Denv=remote
-</code>
+<code>clean test -Denv=remote</code>
 
 ## :pushpin: Конфигурация тестов
 ### local.properties

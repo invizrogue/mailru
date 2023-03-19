@@ -5,8 +5,8 @@
 
 ## :pushpin: Технологии и инструменты
 <p align="center">
-<a href="https://www.jetbrains.com/idea/"><img src="readme/images/IDEA.svg" width="50" height="50" title="IntelliJ Idea" alt="IDEA"/></a>
-<a href="https://www.java.com/"><img src="readme/images/Java.svg" width="50" height="50"  alt="Java"/></a>
+<a href="https://www.jetbrains.com/idea/"><img src="readme/images/IntelliJ_IDEA_Icon.svg" width="50" height="50" title="IntelliJ Idea" alt="IDEA"/></a>
+<a href="https://www.java.com/"><img src="readme/images/java.svg" width="50" height="50"  alt="Java"/></a>
 <a href="https://junit.org/junit5/"><img src="readme/images/JUnit5.svg" width="50" height="50"  alt="JUnit5"/></a>
 <a href="https://gradle.org/"><img src="readme/images/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
 <a href="https://selenide.org/"><img src="readme/images/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>

@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "Tinkoff Test",
+    "environment": "qa.dmikhaylov",
+    "comment": "@dmikhaylov_ru",
+    "reportLink": "https://jenkins.autotests.cloud",
+    "language": "ru",
+    "allureFolder": "build/reports/allure-report/allureReport/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5960022431:AAEjK3PWtLZl1WIvGAQxMAszfkQTAyHCEok",
+    "chat": "-1001885252364",
+    "replyTo": ""
+  }
+}

@@ -2,13 +2,23 @@ package dmikhaylov.qa.tests;
 
 import dmikhaylov.qa.base.BaseTest;
 import static io.qameta.allure.Allure.step;
+
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+import static io.qameta.allure.SeverityLevel.*;
 import java.util.List;
 
 public class MainPageTest extends BaseTest {
 
+    @Owner("dmikhaylov")
+    @Severity(BLOCKER)
+    @Tags({@Tag("ui")})
     @MethodSource("headMenuProvider")
     @ParameterizedTest(name="Наличие пунктов меню в заголовке главной страницы")
     public void verifyElementsOfHeadMenuTest(List<String> items) {
@@ -20,6 +30,9 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @Owner("dmikhaylov")
+    @Severity(BLOCKER)
+    @Tags({@Tag("ui")})
     @MethodSource("tabsMenuProvider")
     @ParameterizedTest(name="Наличие пунктов таб-меню в основной части страницы")
     public void verifyElementsOfTabsMenuTest(List<String> items) {
@@ -31,6 +44,8 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @Tags({@Tag("ui")})
+    @DisplayName("Проверка: количество основных статей в таб-меню Новости равно 13")
     @Test
     public void verifySizeOfRegularNewsContentItemsTest() {
         step("Открываем главную страницу сайта", () -> {
@@ -41,6 +56,10 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @Owner("dmikhaylov")
+    @Severity(BLOCKER)
+    @Tags({@Tag("ui")})
+    @DisplayName("Проверка: количество основных статей в таб-меню Авто равно 14")
     @Test
     public void verifySizeOfRegularAutoContentItemsTest() {
         step("Открываем главную страницу сайта", () -> {
@@ -54,6 +73,10 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @Owner("dmikhaylov")
+    @Severity(BLOCKER)
+    @Tags({@Tag("ui"), @Tag("modal")})
+    @DisplayName("Проверка появления модального окна при нажатии на кнопку Войти")
     @Test
     public void shouldBeModalAppearsByClickingEnterButtonTest() {
         step("Открываем главную страницу сайта", () -> {
@@ -67,6 +90,10 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @Owner("dmikhaylov")
+    @Severity(BLOCKER)
+    @Tags({@Tag("ui"), @Tag("modal")})
+    @DisplayName("Проверка смены домена при изменении провайдера")
     @Test
     public void shouldBeChangeDomainNameByClickingProviderTest() {
         step("Открываем главную страницу сайта", () -> {
@@ -97,5 +124,4 @@ public class MainPageTest extends BaseTest {
             mailRuPage.clickOnMailruInModal();
         });
     }
-
 }

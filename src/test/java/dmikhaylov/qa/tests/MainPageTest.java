@@ -109,19 +109,19 @@ public class MainPageTest extends BaseTest {
             mailRuPage.clickOnYandexInModal();
         });
         step("Проверяем, что домен сменился на @yandex.ru", () -> {
-            mailRuPage.clickOnYandexInModal();
+            mailRuPage.checkYandexDomain();
         });
         step("Выбираем провайдера Google", () -> {
             mailRuPage.clickOnGoogleInModal();
         });
         step("Проверяем, что домен сменился на @google.com", () -> {
-            mailRuPage.clickOnGoogleInModal();
+            mailRuPage.checkGoogleDomain();
         });
         step("Выбираем провайдера Mail.ru", () -> {
             mailRuPage.clickOnMailruInModal();
         });
         step("Проверяем, что домен сменился на @mail.ru", () -> {
-            mailRuPage.clickOnMailruInModal();
+            mailRuPage.checkMailruDomain();
         });
     }
 }

@@ -1,4 +1,4 @@
-# Автоматизация тестирования <a href="https://mail.ru" target="_blank"><img src="readme/images/mail.svg">mail.ru</a>
+# Автоматизация тестирования <a href="https://mail.ru" target="_blank"><img src="readme/images/mail.svg" width="40" height="40">mail.ru</a>
 
 ## :scrol: Содержание
 - [Технологии и инструменты]()

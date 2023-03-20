@@ -8,23 +8,11 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import java.util.List;
-import java.util.stream.Stream;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
 
     protected MailRuPage mailRuPage = new MailRuPage();
-
-    protected static Stream<List<String>> headMenuProvider() {
-        return Stream.of(List.of("Mail.ru", "Почта", "Облако", "Одноклассники",
-                "Вконтакте", "Новости", "Знакомства"));
-    }
-
-    protected static Stream<List<String>> tabsMenuProvider() {
-        return Stream.of(List.of("Новости", "Спецоперация", "Спорт", "Леди", "Авто", "Кино",
-                "Hi-Tech", "Игры", "Дети", "Здоровье", "Дом", "Питомцы"));
-    }
 
     @BeforeAll
     static void setUp() {

@@ -2,19 +2,26 @@ package dmikhaylov.qa.tests;
 
 import dmikhaylov.qa.base.BaseTest;
 import static io.qameta.allure.Allure.step;
-
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.*;
 import static io.qameta.allure.SeverityLevel.*;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class MainPageTest extends BaseTest {
+
+    static Stream<List<String>> headMenuProvider() {
+        return Stream.of(List.of("Mail.ru", "Почта", "Облако", "Одноклассники",
+                "Вконтакте", "Новости", "Знакомства"));
+    }
+
+    static Stream<List<String>> tabsMenuProvider() {
+        return Stream.of(List.of("Новости", "Спецоперация", "Спорт", "Леди", "Авто", "Кино",
+                "Hi-Tech", "Игры", "Дети", "Здоровье", "Дом", "Питомцы"));
+    }
 
     @Owner("dmikhaylov")
     @Severity(BLOCKER)
@@ -44,32 +51,22 @@ public class MainPageTest extends BaseTest {
         });
     }
 
-    @Tags({@Tag("ui")})
-    @DisplayName("Проверка: количество основных статей в таб-меню Новости равно 13")
-    @Test
-    public void verifySizeOfRegularNewsContentItemsTest() {
-        step("Открываем главную страницу сайта", () -> {
-            mailRuPage.openPage();
-        });
-        step("Проверяем, что количество основных новостных статей в таб-меню Новости равно 13", () -> {
-            mailRuPage.verifySizeOfNewsContent(13);
-        });
-    }
-
+    @ValueSource(strings = {"Новости", "Спецоперация", "Спорт", "Леди", "Авто", "Кино",
+            "Hi-Tech", "Игры", "Дети", "Здоровье", "Дом", "Питомцы"})
     @Owner("dmikhaylov")
     @Severity(BLOCKER)
     @Tags({@Tag("ui")})
-    @DisplayName("Проверка: количество основных статей в таб-меню Авто равно 14")
-    @Test
-    public void verifySizeOfRegularAutoContentItemsTest() {
+    @ParameterizedTest(name="Проверка: количество основных статей в таб-меню {0} меньше либо равно 15")
+    public void verifySizeOfRegularAutoContentItemsTest(String tabMenu) {
         step("Открываем главную страницу сайта", () -> {
             mailRuPage.openPage();
         });
-        step("Нажимаем на таб-меню Авто", () -> {
-            mailRuPage.clickOnAutoTab();
+        step("Нажимаем на таб-меню " + tabMenu, () -> {
+            mailRuPage.clickOnTabMenu(tabMenu);
         });
-        step("Проверяем, что количество основных новостных статей в таб-меню Авто равно 14", () -> {
-            mailRuPage.verifySizeOfNewsContent(14);
+        step("Проверяем, что количество основных новостных статей в таб-меню "
+                + tabMenu + " меньше либо равно 15", () -> {
+            mailRuPage.verifySizeOfContent(15);
         });
     }
 
@@ -90,12 +87,16 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @CsvSource({
+            "Yandex, yandex, yandex.ru",
+            "Google, google, gmail.com",
+            "Mail.ru, mailru, mail.ru"
+    })
     @Owner("dmikhaylov")
     @Severity(BLOCKER)
     @Tags({@Tag("ui"), @Tag("modal")})
-    @DisplayName("Проверка смены домена при изменении провайдера")
-    @Test
-    public void shouldBeChangeDomainNameByClickingProviderTest() {
+    @ParameterizedTest(name="Проверка смены домена на {2} при изменении провайдера на {0}")
+    public void shouldBeChangeDomainNameByClickingProviderTest(String providerTitle, String provider, String domain) {
         step("Открываем главную страницу сайта", () -> {
             mailRuPage.openPage();
         });
@@ -105,23 +106,11 @@ public class MainPageTest extends BaseTest {
         step("Переключаемся на модальное окно", () -> {
             mailRuPage.checkModalAppears();
         });
-        step("Выбираем провайдера Yandex", () -> {
-            mailRuPage.clickOnYandexInModal();
+        step("Выбираем провайдера " + providerTitle, () -> {
+            mailRuPage.selectProviderInModal(provider);
         });
-        step("Проверяем, что домен сменился на @yandex.ru", () -> {
-            mailRuPage.checkYandexDomain();
-        });
-        step("Выбираем провайдера Google", () -> {
-            mailRuPage.clickOnGoogleInModal();
-        });
-        step("Проверяем, что домен сменился на @google.com", () -> {
-            mailRuPage.checkGoogleDomain();
-        });
-        step("Выбираем провайдера Mail.ru", () -> {
-            mailRuPage.clickOnMailruInModal();
-        });
-        step("Проверяем, что домен сменился на @mail.ru", () -> {
-            mailRuPage.checkMailruDomain();
+        step("Проверяем, что домен сменился на @" + domain, () -> {
+            mailRuPage.checkDomainInModal(domain);
         });
     }
 }

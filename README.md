@@ -45,7 +45,7 @@
 - <code>browserName</code> - название браузера (chrome, firefox)
 - <code>browserVersion</code> - версия браузера
 - <code>browserSize</code> - размер окна браузера
-- <code>remote</code> - адрес развёрнутого контейнера selenoid
+- <code>remote</code> - адрес сервера с selenoid
 
 
 ## :pushpin: Описание параметров для сборки

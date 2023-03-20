@@ -3,7 +3,7 @@
 ## :scroll: Содержание
 - [Технологии и инструменты](#pushpin-технологии-и-инструменты)
 - [Запуск тестов](#pushpin-запуск-тестов)
-- [Конфигурация тестов](#pushpin-конфигурация-тестов)
+- 
 
 ## :pushpin: Технологии и инструменты
 <p align="center">
@@ -22,24 +22,13 @@
 
 ## :pushpin: Запуск тестов
 ### Локально
-<code>gradle clean test -Denv=local</code>
+<code>gradle clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=800x600</code>
 
 ### Удалённо
-<code>clean test -Denv=remote</code>
+<code>clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=800x600 -Dremote=selenoid.autotests.cloud</code>
 
-## :pushpin: Конфигурация тестов
-### local.properties
-- <code>baseUrl</code> - тестируемый ресурс
-- <code>browserName</code> - название браузера (chrome, firefox)
-- <code>browserVersion</code> - версия браузера
-- <code>browserSize</code> - размер окна браузера
-
-### remote.properties
-- <code>baseUrl</code> - тестируемый ресурс
-- <code>browserName</code> - название браузера (chrome, firefox)
-- <code>browserVersion</code> - версия браузера
-- <code>browserSize</code> - размер окна браузера
-- <code>remote</code> - адрес развёрнутого контейнера selenoid
+## :pushpin: Отчёт Allure
+<img src="readme/screenshots/allure_overview.png" width="100" height="100"  alt="Telegram"/>
 
 [Вернуться к содержанию](#scroll-содержание)
 

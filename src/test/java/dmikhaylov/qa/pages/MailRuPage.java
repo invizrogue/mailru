@@ -80,7 +80,4 @@ public class MailRuPage {
         $x("//div[@class='domain-select']//span[text()='@yandex.ru']").shouldBe(visible);
         return this;
     }
-
-
-
 }

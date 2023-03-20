@@ -1,14 +1,17 @@
 package dmikhaylov.qa.base;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import dmikhaylov.qa.config.WebDriverProvider;
 import dmikhaylov.qa.helpers.Attach;
 import dmikhaylov.qa.pages.MailRuPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
@@ -28,7 +31,21 @@ public class BaseTest {
 
     @BeforeAll
     static void setUp() {
-        WebDriverProvider.setUp();
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
+        Configuration.browserSize = System.getProperty("browserSize", "1366x768");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://mail.ru");
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.remote = "https://user1:1234@"
+                + System.getProperty("selenoidUrl", "selenoid.autotests.cloud")
+                + "/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach

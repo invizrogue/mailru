@@ -9,6 +9,7 @@
 - [Allure TO](#pushpin-allure-to)
 - [Задача в JIRA](#pushpin-задача-в-jira)
 - [Отчёт Telegram](#pushpin-отчёт-telegram)
+- [Видео прохождения тест-кейса](#pushpin-видео-прохождения-тест-кейса)
 
 ## :pushpin: Технологии и инструменты
 <p align="center">

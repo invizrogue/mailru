@@ -31,13 +31,13 @@
 <code>gradle clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=800x600</code>
 
 ### Удалённо
-<code>clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=800x600 -Dremote=selenoid.autotests.cloud</code>
+<code>clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=800x600 -DselenoidUrl=selenoid.autotests.cloud</code>
 
 ## :pushpin: Описание параметров для сборки
 - <code>BROWSER</code> браузер, по умолчанию chrome
 - <code>BROWSER_VERSION</code> версия браузера, по умолчанию 100.0
 - <code>BROWSER_SIZE</code> размер окна браузера, по умолчанию 1920x1080
-- <code>REMOTE</code> адрес удаленного сервера
+- <code>SELENOID_URL</code> адрес удаленного сервера с selenoid
 
 ## :pushpin: Задача в Jenkins
 
@@ -63,7 +63,6 @@
 
 ## :pushpin: Видео прохождения тест-кейса
 <img src="readme/video/jenkins.gif" alt="gif"/>
-
 
 [Вернуться к содержанию](#scroll-содержание)
 

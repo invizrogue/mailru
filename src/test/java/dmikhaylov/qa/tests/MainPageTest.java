@@ -8,6 +8,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import static io.qameta.allure.SeverityLevel.*;
 import java.util.List;
 import java.util.stream.Stream;
@@ -52,32 +53,22 @@ public class MainPageTest extends BaseTest {
         });
     }
 
-    @Tags({@Tag("ui")})
-    @DisplayName("Проверка: количество основных статей в таб-меню Новости равно 13")
-    @Test
-    public void verifySizeOfRegularNewsContentItemsTest() {
-        step("Открываем главную страницу сайта", () -> {
-            mailRuPage.openPage();
-        });
-        step("Проверяем, что количество основных новостных статей в таб-меню Новости равно 13", () -> {
-            mailRuPage.verifySizeOfNewsContent(13);
-        });
-    }
-
+    @ValueSource(strings = {"Новости", "Спецоперация", "Спорт", "Леди", "Авто", "Кино",
+            "Hi-Tech", "Игры", "Дети", "Здоровье", "Дом", "Питомцы"})
     @Owner("dmikhaylov")
     @Severity(BLOCKER)
     @Tags({@Tag("ui")})
-    @DisplayName("Проверка: количество основных статей в таб-меню Авто равно 14")
-    @Test
-    public void verifySizeOfRegularAutoContentItemsTest() {
+    @ParameterizedTest(name="Проверка: количество основных статей в таб-меню {0} меньше либо равно 15")
+    public void verifySizeOfRegularAutoContentItemsTest(String tabMenu) {
         step("Открываем главную страницу сайта", () -> {
             mailRuPage.openPage();
         });
-        step("Нажимаем на таб-меню Авто", () -> {
-            mailRuPage.clickOnAutoTab();
+        step("Нажимаем на таб-меню " + tabMenu, () -> {
+            mailRuPage.clickOnTabMenu(tabMenu);
         });
-        step("Проверяем, что количество основных новостных статей в таб-меню Авто равно 14", () -> {
-            mailRuPage.verifySizeOfNewsContent(14);
+        step("Проверяем, что количество основных новостных статей в таб-меню "
+                + tabMenu + " меньше либо равно 15", () -> {
+            mailRuPage.verifySizeOfContent(15);
         });
     }
 

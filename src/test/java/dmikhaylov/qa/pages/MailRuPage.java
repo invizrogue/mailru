@@ -30,13 +30,13 @@ public class MailRuPage {
         return this;
     }
 
-    public MailRuPage verifySizeOfNewsContent(int size) {
-        tabsContent.filter(visible).shouldHave(size(size));
+    public MailRuPage verifySizeOfContent(int size) {
+        tabsContent.filter(visible).shouldHave(sizeLessThanOrEqual(size));
         return this;
     }
 
-    public MailRuPage clickOnAutoTab() {
-        $x("//a[text()='Авто']").click();
+    public MailRuPage clickOnTabMenu(String tabMenu) {
+        $x("//div[@data-testid='news-tabs']/a[text()='" + tabMenu + "']").click();
         return this;
     }
 

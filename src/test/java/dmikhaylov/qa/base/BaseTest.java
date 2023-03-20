@@ -39,6 +39,7 @@ public class BaseTest {
         Configuration.remote = "https://user1:1234@"
                 + System.getProperty("selenoidUrl", "selenoid.autotests.cloud")
                 + "/wd/hub";
+        System.setProperty("chromeoptions.prefs","intl.accept_languages=ru");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

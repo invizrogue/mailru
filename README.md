@@ -29,6 +29,9 @@
 
 ## :pushpin: Отчёт Allure
 <img src="readme/screenshots/allure_overview.png" alt="Allure_overview"/>
+<img src="readme/screenshots/allure_suites.png" alt="Allure_suites"/>
+<img src="readme/screenshots/allure_graphs.png" alt="Allure_graphs"/>
+
 
 [Вернуться к содержанию](#scroll-содержание)
 

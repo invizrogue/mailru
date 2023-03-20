@@ -4,6 +4,7 @@
 - [Технологии и инструменты](#pushpin-технологии-и-инструменты)
 - [Запуск тестов](#pushpin-запуск-тестов)
 - [Описание параметров для сборки](#pushpin-описание-параметров-для-сборки)
+- [Задача в Jenkins](#pushpin-задача-в-jenkins)
 - [Отчёт Allure](#pushpin-отчёт-allure)
 - [Allure TO](#pushpin-allure-to)
 - [Задача в JIRA](#pushpin-задача-в-jira)
@@ -36,6 +37,9 @@
 - <code>BROWSER_VERSION</code> версия браузера, по умолчанию 100.0
 - <code>BROWSER_SIZE</code> размер окна браузера, по умолчанию 1920x1080
 - <code>REMOTE</code> адрес удаленного сервера
+
+## :pushpin: Задача в Jenkins
+<a href="https://jenkins.autotests.cloud/job/C17-dmikhaylov_ru-mailru14/">Ссылка на задачу</a>
 
 ## :pushpin: Отчёт Allure
 <img src="readme/screenshots/allure_overview.png" alt="Allure_overview"/>

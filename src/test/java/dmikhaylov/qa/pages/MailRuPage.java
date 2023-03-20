@@ -51,33 +51,13 @@ public class MailRuPage {
         return this;
     }
 
-    public MailRuPage clickOnMailruInModal() {
-        $("div[data-provider='mailru']").click();
+    public MailRuPage selectProviderInModal(String provider) {
+        $("div[data-provider='" + provider + "']").click();
         return this;
     }
 
-    public MailRuPage clickOnYandexInModal() {
-        $("div[data-provider='yandex']").click();
-        return this;
-    }
-
-    public MailRuPage clickOnGoogleInModal() {
-        $("div[data-provider='google']").click();
-        return this;
-    }
-
-    public MailRuPage checkMailruDomain() {
-        $x("//div[@class='domain-select']//span[text()='@mail.ru']").shouldBe(visible);
-        return this;
-    }
-
-    public MailRuPage checkGoogleDomain() {
-        $x("//div[@class='domain-select']//span[text()='@gmail.com']").shouldBe(visible);
-        return this;
-    }
-
-    public MailRuPage checkYandexDomain() {
-        $x("//div[@class='domain-select']//span[text()='@yandex.ru']").shouldBe(visible);
+    public MailRuPage checkDomainInModal(String domain) {
+        $x("//div[@class='domain-select']//span[text()='@" + domain + "']").shouldBe(visible);
         return this;
     }
 }

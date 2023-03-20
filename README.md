@@ -41,5 +41,37 @@
 - <code>browserSize</code> - размер окна браузера
 - <code>remote</code> - адрес развёрнутого контейнера selenoid
 
+
+## :pushpin: Описание параметров для сборки
+- <code>ENV</code> окружение, в котором запускаютя тесты, по умолчанию remote
+
+## :pushpin: Задача в Jenkins
+<a href="https://jenkins.autotests.cloud/job/C17-dmikhaylov_ru-mailru14/"><img src="readme/screenshots/jenkins.png" alt="Задача в jenkins"></a>
+
+## :pushpin: Отчёт Allure
+<img src="readme/screenshots/allure_overview.png" alt="Allure_overview"/>
+<img src="readme/screenshots/allure_suites.png" alt="Allure_suites"/>
+<img src="readme/screenshots/allure_graphs.png" alt="Allure_graphs"/>
+
+## :pushpin: Allure TO
+### Автоматические тест-кейсы
+<a href="https://allure.autotests.cloud/project/2049/test-cases?treeId=3950"><img src="readme/screenshots/allure_to_testcases.png" alt="Allure_to_testcases"/></a>
+
+### Создание ручного тест-кейса
+<img src="readme/screenshots/allure_to_manual.png" alt="Allure_to_manual"/>
+
+## :pushpin: Задача в JIRA
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-606"><img src="readme/screenshots/jira.png" alt="jira"/></a>
+
+## :pushpin: Отчёт Telegram
+<img src="readme/screenshots/telegram.png" alt="telegram"/>
+
+## :pushpin: Видео прохождения тест-кейса
+<img src="readme/video/jenkins.gif" alt="gif"/>
+
+
+[Вернуться к содержанию](#scroll-содержание)
+
+
 [Вернуться к содержанию](#scroll-содержание)
 

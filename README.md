@@ -60,5 +60,9 @@
 ## :pushpin: Отчёт Telegram
 <img src="readme/screenshots/telegram.png" alt="telegram"/>
 
+## :pushpin: Видео прохождения тест-кейса
+<img src="readme/video/jenkins.gif" alt="gif"/>
+
+
 [Вернуться к содержанию](#scroll-содержание)
 

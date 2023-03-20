@@ -49,13 +49,13 @@
 
 ## :pushpin: Allure TO
 ### Автоматические тест-кейсы
-<img src="readme/screenshots/allure_to_testcases.png" alt="Allure_to_testcases"/>
+<a href="https://allure.autotests.cloud/project/2049/test-cases?treeId=3950"><img src="readme/screenshots/allure_to_testcases.png" alt="Allure_to_testcases"/></a>
 
 ### Создание ручного тест-кейса
 <img src="readme/screenshots/allure_to_manual.png" alt="Allure_to_manual"/>
 
 ## :pushpin: Задача в JIRA
-<img src="readme/screenshots/jira.png" alt="jira"/>
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-606"><img src="readme/screenshots/jira.png" alt="jira"/></a>
 
 ## :pushpin: Отчёт Telegram
 <img src="readme/screenshots/telegram.png" alt="telegram"/>

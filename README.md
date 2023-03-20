@@ -28,7 +28,7 @@
 <code>clean test -Dbrowser=chrome -DbrowserVersion=100.0 -DbrowserSize=800x600 -Dremote=selenoid.autotests.cloud</code>
 
 ## :pushpin: Отчёт Allure
-<img src="readme/screenshots/allure_overview.png" width="100" height="100"  alt="Telegram"/>
+<img src="readme/screenshots/allure_overview.png" alt="Allure_overview"/>
 
 [Вернуться к содержанию](#scroll-содержание)
 

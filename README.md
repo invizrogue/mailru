@@ -39,7 +39,8 @@
 - <code>REMOTE</code> адрес удаленного сервера
 
 ## :pushpin: Задача в Jenkins
-<a href="https://jenkins.autotests.cloud/job/C17-dmikhaylov_ru-mailru14/">Ссылка на задачу</a>
+
+<a href="https://jenkins.autotests.cloud/job/C17-dmikhaylov_ru-mailru14/"><img src="readme/screenshots/jenkins.png" alt="Задача в jenkins"></a>
 
 ## :pushpin: Отчёт Allure
 <img src="readme/screenshots/allure_overview.png" alt="Allure_overview"/>

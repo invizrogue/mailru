@@ -45,6 +45,7 @@
 ## :pushpin: Allure TO
 ### Автоматические тест-кейсы
 <img src="readme/screenshots/allure_to_testcases.png" alt="Allure_to_testcases"/>
+
 ### Создание ручного тест-кейса
 <img src="readme/screenshots/allure_to_manual.png" alt="Allure_to_manual"/>
 
